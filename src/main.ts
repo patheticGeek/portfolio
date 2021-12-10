@@ -1,12 +1,12 @@
-import App from "./App.svelte";
+import App from "./App.svelte"
 
-import { setup } from "twind/shim";
-import twindConfig from "./twind.config";
+import { setup } from "twind/shim"
+import twindConfig from "./twind.config"
 
-setup(twindConfig);
+setup(twindConfig)
 
 const app = new App({
   target: document.body,
-});
+})
 
-export default app;
+export default app

@@ -1,5 +1,5 @@
-import type { Configuration } from "twind";
-import * as twindColors from "twind/colors";
+import type { Configuration } from "twind"
+import * as twindColors from "twind/colors"
 
 const twindConfig: Configuration = {
   theme: {
@@ -12,6 +12,6 @@ const twindConfig: Configuration = {
       },
     },
   },
-};
+}
 
-export default twindConfig;
+export default twindConfig
