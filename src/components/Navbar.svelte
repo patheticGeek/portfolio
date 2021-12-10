@@ -8,9 +8,9 @@
   ];
 </script>
 
-<div class="flex px-4 border-b-1 border-gray-600">
-  <div class="px-4 py-3">
-    <a href="/" class="text-gray-400 hover:text-white text-underline"
+<div class="flex items-stretch px-4 border-b-1 border-gray-600">
+  <div class="flex items-center px-5">
+    <a href="/" class="block text-gray-400 hover:text-white text-underline"
       >patheticGeek://</a
     >
     {window.location.pathname.slice(1)}
@@ -22,7 +22,7 @@
         <li
           class="text-gray-200 font-medium hover:text-gray-400 hover:text-underline"
         >
-          <a class="block px-4 py-3" href={navLink.href}>{navLink.label}</a>
+          <a class="block px-5 py-4" href={navLink.href}>{navLink.label}</a>
         </li>
       {/each}
     </ul>
