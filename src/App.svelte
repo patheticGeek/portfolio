@@ -1,19 +1,22 @@
 <script lang="ts">
-  import Navbar from "./components/Navbar.svelte";
+  import Navbar from "./components/Navbar.svelte"
+  import { Router, Route } from "svelte-routing"
 
-  let name = "";
+  import Home from "./pages/Home.svelte"
+  import Projects from "./pages/Projects.svelte"
+  import Work from "./pages/Work.svelte"
+  import Blog from "./pages/Blog.svelte"
+
+  export let url = ""
 </script>
 
-<Navbar />
+<Router {url}>
+  <Navbar />
 
-<main class="w-full max-w-2xl mx-auto py-5 px-5">
-  <input
-    class="bg-gray-700 p-3 rounded-sm shadow"
-    bind:value={name}
-    placeholder="Your name"
-  />
-
-  {#if name}
-    <h1 class="mt-3 text-lg">Hello there, {name}!</h1>
-  {/if}
-</main>
+  <main class="w-full max-w-2xl mx-auto py-5 px-5">
+    <Route path="/" component={Home} />
+    <Route path="work" component={Work} />
+    <Route path="projects" component={Projects} />
+    <Route path="blog" component={Blog} />
+  </main>
+</Router>
