@@ -20,7 +20,7 @@
   <div class="flex items-center px-5">
     <a
       href="/"
-      class="block text-gray-400 hover:text-white text-underline mr-1"
+      class="block text-gray-400 hover:text-white text-underline mr-1 py-4"
     >
       patheticGeek://
     </a>
