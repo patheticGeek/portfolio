@@ -6,6 +6,17 @@
   import Li from "../components/markdown/li.svelte"
   import P from "../components/markdown/p.svelte"
   import Ul from "../components/markdown/ul.svelte"
+
+  const links = [
+    { label: "📨 Email", href: "mailto:geekpathetic@gmail.com" },
+    { label: "🧑‍💻 Github", href: "https://github.com/patheticGeek" },
+    { label: "🐦 Twitter", href: "https://twitter.com/pathetic_geek" },
+    { label: "💼 LinkedIn", href: "https://www.linkedin.com/in/pathetic-geek" },
+    {
+      label: "👻 Snapchat",
+      href: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    },
+  ]
 </script>
 
 <H1>Hey there 👋</H1>
@@ -25,19 +36,9 @@
 <H2>You can find me at these places:</H2>
 
 <Ul>
-  <Li>
-    <A href="mailto:geekpathetic@gmail.com">📨 Email</A>
-  </Li>
-  <Li>
-    <A href="https://github.com/patheticGeek">🧑‍💻 Github</A>
-  </Li>
-  <Li>
-    <A href="https://twitter.com/pathetic_geek">🐦 Twitter</A>
-  </Li>
-  <Li>
-    <A href="https://www.linkedin.com/in/pathetic-geek">💼 LinkedIn</A>
-  </Li>
-  <Li>
-    <A href="https://www.snapchat.com/add/pathetic.geek">👻 Snapchat</A>
-  </Li>
+  {#each links as { label, href }}
+    <Li>
+      <A {href}>{label}</A>
+    </Li>
+  {/each}
 </Ul>
