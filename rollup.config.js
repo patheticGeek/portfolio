@@ -6,7 +6,6 @@ import { terser } from "rollup-plugin-terser"
 import sveltePreprocess from "svelte-preprocess"
 import typescript from "@rollup/plugin-typescript"
 import css from "rollup-plugin-css-only"
-import { mdsvex } from "mdsvex"
 
 const production = !process.env.ROLLUP_WATCH
 
@@ -45,11 +44,8 @@ export default {
   },
   plugins: [
     svelte({
-      // preprocess: sveltePreprocess({ sourceMap: !production }),
-      preprocess: mdsvex({
-        layout: "./src/components/markdown/layout.svelte",
-      }),
-      extensions: [".svelte", ".svx", ".md"],
+      preprocess: sveltePreprocess({ sourceMap: !production }),
+      extensions: [".svelte"],
       compilerOptions: {
         // enable run-time checks when not in production
         dev: !production,
