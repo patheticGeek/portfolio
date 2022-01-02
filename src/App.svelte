@@ -4,7 +4,6 @@
 
   import Home from "./pages/Home.svelte"
   import Projects from "./pages/Projects.svelte"
-  import Work from "./pages/Work.svelte"
   import Blog from "./pages/Blog.svelte"
 
   export let url = ""
@@ -15,7 +14,6 @@
 
   <main class="w-full max-w-2xl mx-auto py-5 px-5">
     <Route path="/" component={Home} />
-    <Route path="work" component={Work} />
     <Route path="projects" component={Projects} />
     <Route path="blog" component={Blog} />
   </main>

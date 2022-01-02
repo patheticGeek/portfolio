@@ -1,11 +1,11 @@
 <script lang="ts">
   import { getProjects } from "../services/github"
+  import { GITHUB_TOPIC } from "../consts"
 
   import A from "../components/markdown/a.svelte"
   import H1 from "../components/markdown/h1.svelte"
   import H3 from "../components/markdown/h3.svelte"
   import P from "../components/markdown/p.svelte"
-  import { GITHUB_TOPIC } from "../consts"
 
   let repos = getProjects()
 </script>
