@@ -21,6 +21,10 @@
   export let projects: Projects
 </script>
 
+<svelte:head>
+  <title>Geek's Projects</title>
+</svelte:head>
+
 <H1>Projects</H1>
 <P>Here are some of the things I've worked on</P>
 <P>
@@ -46,13 +50,11 @@
       {/if}
 
       {#each project.topics as topic}
-        {#if topic !== GITHUB_TOPIC}
-          <div
-            class="mr-2 bg-white bg-opacity-5 rounded-full px-2 py-0.5 text-xs"
-          >
-            {topic}
-          </div>
-        {/if}
+        <div
+          class="mr-2 bg-white bg-opacity-5 rounded-full px-2 py-0.5 text-xs"
+        >
+          {topic}
+        </div>
       {/each}
     </div>
   </P>
