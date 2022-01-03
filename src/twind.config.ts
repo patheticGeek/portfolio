@@ -5,13 +5,13 @@ const twindConfig: Configuration = {
   theme: {
     extend: {
       colors: {
-        ...twindColors,
+        ...twindColors
       },
       fontFamily: {
-        sans: ["Fira Code", "sans-serif"],
-      },
-    },
-  },
+        sans: ["Fira Code", "sans-serif"]
+      }
+    }
+  }
 }
 
 export default twindConfig
