@@ -1,12 +1,12 @@
-import { getProjects } from "$lib/github"
+import { getBlogs } from "$lib/notion"
 import type { RequestHandler } from "@sveltejs/kit"
 
 export const get: RequestHandler = async () => {
-  const projects = await getProjects()
+  const blogs = await getBlogs()
 
   return {
     body: {
-      projects
+      blogs
     }
   }
 }
