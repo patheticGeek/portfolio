@@ -1,5 +1,6 @@
 export const GITHUB_USERNAME = import.meta.env.VITE_GITHUB_USERNAME
 export const GITHUB_TOPIC = import.meta.env.VITE_GITHUB_TOPIC
+export const DEV_TO_USERNAME = import.meta.env.VITE_DEV_TO_USERNAME
 
 export const HOME_LINKS = [
   { label: "📨 Email", href: "mailto:geekpathetic@gmail.com" },

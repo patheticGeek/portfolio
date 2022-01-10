@@ -3,8 +3,7 @@
 interface ImportMetaEnv {
   readonly VITE_GITHUB_USERNAME: string
   readonly VITE_GITHUB_TOPIC: string
-  readonly VITE_NOTION_TOKEN: string
-  readonly VITE_NOTION_BLOGS_DB: string
+  readonly VITE_DEV_TO_USERNAME: string
   // more env variables...
 }
 

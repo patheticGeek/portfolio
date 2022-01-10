@@ -1,10 +1,8 @@
-import { getBlogs } from "$lib/notion"
+import { getBlog } from "$lib/devto"
 import type { RequestHandler } from "@sveltejs/kit"
 
 export const get: RequestHandler = async ({ params }) => {
-  const {
-    results: [blog]
-  } = await getBlogs(params.slug)
+  const blog = await getBlog(params.slug)
 
   if (!blog) {
     return {
