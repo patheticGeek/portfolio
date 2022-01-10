@@ -1,7 +1,8 @@
 import type { Blog, BlogWithBody } from "src/types"
 import type { Article, ArticleWithBody } from "src/types/devto"
 
-const getUrlFromSlug = (slug: string) => `/blog/${slug}`
+const getBlogUrl = (username: string, slug: string) =>
+  `https://dev.to/${username}/${slug}`
 
 export const filterArticlesProperties = (article: Article): Blog => {
   const {
@@ -14,7 +15,8 @@ export const filterArticlesProperties = (article: Article): Blog => {
     tag_list,
     comments_count,
     readable_publish_date,
-    reading_time_minutes
+    reading_time_minutes,
+    user: { username }
   } = article
 
   return {
@@ -28,7 +30,7 @@ export const filterArticlesProperties = (article: Article): Blog => {
     comments_count,
     readable_publish_date,
     reading_time_minutes,
-    url: getUrlFromSlug(slug)
+    url: getBlogUrl(username, slug)
   }
 }
 
@@ -46,7 +48,8 @@ export const filterArticleProperties = (
     comments_count,
     readable_publish_date,
     reading_time_minutes,
-    body_markdown
+    body_markdown,
+    user: { username }
   } = article
 
   return {
@@ -61,6 +64,6 @@ export const filterArticleProperties = (
     readable_publish_date,
     reading_time_minutes,
     body_markdown,
-    url: getUrlFromSlug(slug)
+    url: getBlogUrl(username, slug)
   }
 }

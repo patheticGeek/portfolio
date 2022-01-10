@@ -7,10 +7,16 @@
   import Li from "src/components/markdown/li.svelte"
   import P from "src/components/markdown/p.svelte"
   import Ul from "src/components/markdown/ul.svelte"
+
+  const title = "Geek's Portfolio"
+  const desc = "Geek bragging about himself"
 </script>
 
 <svelte:head>
-  <title>Geek's Portfolio</title>
+  <title>{title}</title>
+  <meta name="description" content={desc} />
+  <meta name="og:title" content={title} />
+  <meta name="og:description" content={desc} />
 </svelte:head>
 
 <H1>Hey there 👋</H1>
@@ -24,7 +30,7 @@
   Checkout some of
   <A href="/projects">my projects</A>
   or
-  <A href="/writing">my writing</A>
+  <A href="/blog">my writing</A>
 </P>
 
 <H3>You can find me at these places:</H3>

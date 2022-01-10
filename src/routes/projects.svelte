@@ -18,15 +18,22 @@
   import P from "src/components/markdown/p.svelte"
   import Badge from "src/components/Badge.svelte"
 
+  const title = "Geek's Projects"
+  const desc = "Here are some of the things I've somehow made work"
+
   export let projects: Projects
 </script>
 
 <svelte:head>
-  <title>Geek's Projects</title>
+  <title>{title}</title>
+  <meta name="description" content={desc} />
+  <meta name="og:title" content={title} />
+  <meta name="og:description" content={desc} />
 </svelte:head>
 
 <H1>Projects</H1>
-<P>Here are some of the things I've worked on</P>
+
+<P>{desc}</P>
 <P>
   You can also find some smaller experiments on my
   <A href="https://codesandbox.io/u/patheticGeek">CodeSandbox</A>
