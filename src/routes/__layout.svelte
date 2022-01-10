@@ -1,11 +1,15 @@
 <script>
   import Navbar from "../components/Navbar.svelte"
+
+  import "../assets/app.css"
 </script>
 
-<div class="w-full h-full flex flex-col bg-gray-900 text-white font-light">
-  <main class="w-full max-w-2xl mx-auto py-5 px-5">
-    <Navbar />
+<div
+  class="w-full min-h-screen flex flex-col bg-zinc-900 text-white selection:bg-amber-200 selection:bg-opacity-90 selection:text-black font-light"
+>
+  <Navbar />
 
+  <main class="w-full max-w-2xl mx-auto py-5 px-5">
     <slot />
   </main>
 </div>
