@@ -37,10 +37,14 @@
 <P />
 
 {#each projects as project}
-  <H3><A href={project.github_url} openInNewTab>{project.name}</A></H3>
+  <H3
+    ><A href={project.github_url} openInNewTab class="break-words"
+      >{project.name}</A
+    ></H3
+  >
 
   <P>
-    <div class="flex">
+    <div class="flex flex-wrap">
       {#if project.language}
         <Badge>{project.language}</Badge>
       {/if}

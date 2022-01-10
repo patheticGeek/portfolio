@@ -14,7 +14,7 @@
     {$page.url.pathname.split("/")[1]}
   </div>
 
-  <nav class="md:flex ml-auto flex">
+  <nav class="hidden md:flex ml-auto">
     <ul class="flex">
       {#each NAV_LINKS as navLink}
         <li
