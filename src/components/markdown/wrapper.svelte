@@ -7,7 +7,7 @@
 
 <div class="flex items-start {className}">
   {#if !hideSymbol}
-    <div class="w-[5ch] text-center pr-1 text-blueGray-500 select-none">
+    <div class="w-[5ch] text-center pr-1 text-gray-500 select-none">
       {symbol}
     </div>
   {/if}

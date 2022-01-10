@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { page } from "$app/stores"
+
   const navLinks = [
     { label: "Home", href: "/" },
     { label: "Projects", href: "/projects" },
@@ -6,21 +8,22 @@
   ]
 </script>
 
-<div class="flex items-stretch px-4 border-b-1 border-gray-600">
+<div class="flex items-stretch px-4 border-b border-neutral-600">
   <div class="flex items-center px-5">
     <a
       href="/"
-      class="block text-gray-400 hover:text-white text-underline mr-1 py-4"
+      class="block text-gray-400 hover:text-white underline mr-1 py-4"
     >
       patheticGeek://
     </a>
+    {$page.url.pathname.split("/")[1]}
   </div>
 
-  <nav class="hidden md:flex ml-auto flex">
+  <nav class="md:flex ml-auto flex">
     <ul class="flex">
       {#each navLinks as navLink}
         <li
-          class="text-gray-200 font-medium hover:text-gray-400 hover:text-underline"
+          class="text-gray-200 font-medium hover:text-gray-400 hover:underline transition"
         >
           <a class="block px-5 py-4" href={navLink.href}>{navLink.label}</a>
         </li>
