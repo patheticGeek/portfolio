@@ -1,11 +1,6 @@
 <script lang="ts">
   import { page } from "$app/stores"
-
-  const navLinks = [
-    { label: "Home", href: "/" },
-    { label: "Projects", href: "/projects" },
-    { label: "Blog", href: "/blog" }
-  ]
+  import { NAV_LINKS } from "../consts"
 </script>
 
 <div class="flex items-stretch px-4 border-b border-neutral-600">
@@ -21,7 +16,7 @@
 
   <nav class="md:flex ml-auto flex">
     <ul class="flex">
-      {#each navLinks as navLink}
+      {#each NAV_LINKS as navLink}
         <li
           class="text-gray-200 font-medium hover:text-gray-400 hover:underline transition"
         >

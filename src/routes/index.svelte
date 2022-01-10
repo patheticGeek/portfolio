@@ -1,21 +1,12 @@
 <script>
+  import { HOME_LINKS } from "../consts"
+
   import A from "../components/markdown/a.svelte"
   import H1 from "../components/markdown/h1.svelte"
   import H3 from "../components/markdown/h3.svelte"
   import Li from "../components/markdown/li.svelte"
   import P from "../components/markdown/p.svelte"
   import Ul from "../components/markdown/ul.svelte"
-
-  const links = [
-    { label: "📨 Email", href: "mailto:geekpathetic@gmail.com" },
-    { label: "🧑‍💻 Github", href: "https://github.com/patheticGeek" },
-    { label: "🐦 Twitter", href: "https://twitter.com/pathetic_geek" },
-    { label: "💼 LinkedIn", href: "https://www.linkedin.com/in/pathetic-geek" },
-    {
-      label: "👻 Snapchat",
-      href: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-    }
-  ]
 </script>
 
 <H1>Hey there 👋</H1>
@@ -35,9 +26,9 @@
 <H3>You can find me at these places:</H3>
 
 <Ul>
-  {#each links as { label, href }}
+  {#each HOME_LINKS as { label, href }}
     <Li>
-      <A {href}>{label}</A>
+      <A {href} openInNewTab>{label}</A>
     </Li>
   {/each}
 </Ul>

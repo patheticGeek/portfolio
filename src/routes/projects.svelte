@@ -11,12 +11,12 @@
 
 <script lang="ts">
   import type { Projects } from "src/types"
-  import { GITHUB_TOPIC } from "../consts"
 
   import A from "../components/markdown/a.svelte"
   import H1 from "../components/markdown/h1.svelte"
   import H3 from "../components/markdown/h3.svelte"
   import P from "../components/markdown/p.svelte"
+  import Badge from "../components/Badge.svelte"
 
   export let projects: Projects
 </script>
@@ -37,24 +37,16 @@
 <P />
 
 {#each projects as project}
-  <H3><A href={project.github_url}>{project.name}</A></H3>
+  <H3><A href={project.github_url} openInNewTab>{project.name}</A></H3>
 
   <P>
     <div class="flex">
       {#if project.language}
-        <div
-          class="mr-2 bg-white bg-opacity-5 rounded-full px-2 py-0.5 text-xs"
-        >
-          {project.language}
-        </div>
+        <Badge>{project.language}</Badge>
       {/if}
 
       {#each project.topics as topic}
-        <div
-          class="mr-2 bg-white bg-opacity-5 rounded-full px-2 py-0.5 text-xs"
-        >
-          {topic}
-        </div>
+        <Badge>{topic}</Badge>
       {/each}
     </div>
   </P>
@@ -67,8 +59,9 @@
 
   {#if project.website}
     <P>
-      <A href={project.website} class="text-sm">Visit Website »</A>
+      <A class="text-sm" href={project.website} openInNewTab>Visit Website »</A>
     </P>
   {/if}
+
   <P />
 {/each}
