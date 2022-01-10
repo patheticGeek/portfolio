@@ -1,13 +1,17 @@
 <script>
-  import { HOME_LINKS } from "../consts"
+  import { HOME_LINKS } from "src/consts"
 
-  import A from "../components/markdown/a.svelte"
-  import H1 from "../components/markdown/h1.svelte"
-  import H3 from "../components/markdown/h3.svelte"
-  import Li from "../components/markdown/li.svelte"
-  import P from "../components/markdown/p.svelte"
-  import Ul from "../components/markdown/ul.svelte"
+  import A from "src/components/markdown/a.svelte"
+  import H1 from "src/components/markdown/h1.svelte"
+  import H3 from "src/components/markdown/h3.svelte"
+  import Li from "src/components/markdown/li.svelte"
+  import P from "src/components/markdown/p.svelte"
+  import Ul from "src/components/markdown/ul.svelte"
 </script>
+
+<svelte:head>
+  <title>Geek's Portfolio</title>
+</svelte:head>
 
 <H1>Hey there 👋</H1>
 

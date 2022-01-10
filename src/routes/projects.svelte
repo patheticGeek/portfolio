@@ -12,11 +12,11 @@
 <script lang="ts">
   import type { Projects } from "src/types"
 
-  import A from "../components/markdown/a.svelte"
-  import H1 from "../components/markdown/h1.svelte"
-  import H3 from "../components/markdown/h3.svelte"
-  import P from "../components/markdown/p.svelte"
-  import Badge from "../components/Badge.svelte"
+  import A from "src/components/markdown/a.svelte"
+  import H1 from "src/components/markdown/h1.svelte"
+  import H3 from "src/components/markdown/h3.svelte"
+  import P from "src/components/markdown/p.svelte"
+  import Badge from "src/components/Badge.svelte"
 
   export let projects: Projects
 </script>

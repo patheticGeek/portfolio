@@ -1,6 +1,6 @@
 import type { Projects } from "src/types"
 import { Octokit } from "@octokit/rest"
-import { GITHUB_TOPIC, GITHUB_USERNAME } from "../consts"
+import { GITHUB_TOPIC, GITHUB_USERNAME } from "src/consts"
 const octokit = new Octokit()
 
 export const getProjects = async (): Promise<Projects> => {

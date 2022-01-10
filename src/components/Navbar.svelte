@@ -1,6 +1,6 @@
 <script lang="ts">
   import { page } from "$app/stores"
-  import { NAV_LINKS } from "../consts"
+  import { NAV_LINKS } from "src/consts"
 </script>
 
 <div class="flex items-stretch px-4 border-b border-neutral-600">

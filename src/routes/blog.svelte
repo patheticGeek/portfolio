@@ -9,7 +9,7 @@
 </script>
 
 <script lang="ts">
-  import H1 from "../components/markdown/h1.svelte"
+  import H1 from "src/components/markdown/h1.svelte"
 </script>
 
 <svelte:head>
