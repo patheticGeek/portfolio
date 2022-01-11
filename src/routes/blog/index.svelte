@@ -30,7 +30,7 @@
   <meta name="og:description" content={desc} />
 </svelte:head>
 
-<H1>Some of my writings</H1>
+<H1>My blog posts</H1>
 
 <P>{desc}</P>
 
