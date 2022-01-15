@@ -4,9 +4,11 @@ import { GITHUB_TOPIC, GITHUB_USERNAME } from "src/consts"
 const octokit = new Octokit()
 
 export const getProjects = async (): Promise<Projects> => {
-  // get the projects which has this topic and are of the user specified
+  // get the projects which has this topic and are of the user specified ordered by recently updated
   const { data } = await octokit.rest.search.repos({
-    q: `${GITHUB_TOPIC} in:topics user:${GITHUB_USERNAME}`
+    q: `${GITHUB_TOPIC} in:topics user:${GITHUB_USERNAME}`,
+    sort: "updated",
+    order: "desc"
   })
 
   return data.items.map(
