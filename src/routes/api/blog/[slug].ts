@@ -7,9 +7,7 @@ export const get: RequestHandler = async ({ params }) => {
   if (!blog) {
     return {
       status: 404,
-      body: {
-        error: "Not Found"
-      }
+      body: { error: "Not Found" }
     }
   }
 

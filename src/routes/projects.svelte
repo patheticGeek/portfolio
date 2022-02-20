@@ -5,7 +5,7 @@
     const req = await fetch("/api/repos")
     const { projects } = await req.json()
 
-    return { props: { projects } }
+    return { props: { projects }, maxage: 60 }
   }
 </script>
 

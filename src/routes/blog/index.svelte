@@ -5,7 +5,7 @@
     const req = await fetch("/api/blog")
     const { blogs } = await req.json()
 
-    return { props: { blogs } }
+    return { props: { blogs }, maxage: 60 }
   }
 </script>
 
