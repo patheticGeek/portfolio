@@ -20,7 +20,14 @@
         <li
           class="text-gray-200 font-medium hover:text-gray-400 hover:underline transition"
         >
-          <a class="block px-5 py-4" href={navLink.href}>{navLink.label}</a>
+          <a
+            class="block px-5 py-4"
+            href={navLink.href}
+            rel={navLink.newTab ? "noreferrer noopener" : undefined}
+            target={navLink.newTab ? "_blank" : undefined}
+          >
+            {navLink.label}
+          </a>
         </li>
       {/each}
     </ul>
