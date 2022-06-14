@@ -3,7 +3,7 @@ export const GITHUB_TOPIC = import.meta.env.VITE_GITHUB_TOPIC
 export const DEV_TO_USERNAME = import.meta.env.VITE_DEV_TO_USERNAME
 
 export const RESUME_LINK =
-  "https://drive.google.com/file/d/1kheMFiIROTbyZNlOPw0tkm7UGV-5Di5c/view?usp=sharing"
+  "https://drive.google.com/file/d/1ejzXnBOe21Irx8sMquftTHbCemj7sXMN/view?usp=sharing"
 
 export const HOME_LINKS = [
   { label: "📨 Email", href: "mailto:geekpathetic@gmail.com" },
