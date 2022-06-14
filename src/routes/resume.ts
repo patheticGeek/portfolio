@@ -1,7 +1,5 @@
 import type { RequestHandler } from "@sveltejs/kit"
-
-const RESUME_LINK =
-  "https://drive.google.com/file/d/1kheMFiIROTbyZNlOPw0tkm7UGV-5Di5c/view?usp=sharing"
+import { RESUME_LINK } from "src/consts"
 
 export const get: RequestHandler = async () => {
   return {
