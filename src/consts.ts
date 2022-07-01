@@ -10,7 +10,6 @@ export const HOME_LINKS = [
   { label: "🧑‍💻 Github", href: "https://github.com/patheticGeek" },
   { label: "🐦 Twitter", href: "https://twitter.com/pathetic_geek" },
   { label: "💼 LinkedIn", href: "https://www.linkedin.com/in/pathetic-geek" },
-  { label: "🕴️ Resume", href: RESUME_LINK },
   {
     label: "👻 Snapchat",
     href: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
